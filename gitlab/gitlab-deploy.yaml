@@ -29,8 +29,6 @@ spec:
               value: rqwNzXsVmxMtwwVj7m43XTPgfbnx7WfxbknhhM7zhNvd3sqbcLWVtXwpW4fRCdJn
             - name: GITLAB_SECRETS_OTP_KEY_BASE
               value: rqwNzXsVmxMtwwVj7m43XTPgfbnx7WfxbknhhM7zhNvd3sqbcLWVtXwpW4fRCdJn
-            - name: GITLAB_SECRETS_ENCRYPTED_SETTINGS_KEY_BASE
-              value: rqwNzXsVmxMtwwVj7m43XTPgfbnx7WfxbknhhM7zhNvd3sqbcLWVtXwpW4fRCdJn
 
             - name: GITLAB_ROOT_PASSWORD
               value: admin123
@@ -71,12 +69,6 @@ spec:
               value: redis
             - name: REDIS_PORT
               value: "6379"
-
-            - name: SMTP_ENABLED
-              value: "false"
-
-            - name: IMAP_ENABLED
-              value: "false"
           ports:
             - containerPort: 80
               name: http
@@ -89,7 +81,7 @@ spec:
             httpGet:
               path: /
               port: 80
-            initialDelaySeconds: 100
+            initialDelaySeconds: 300
             timeoutSeconds: 5
           readinessProbe:
             httpGet:
