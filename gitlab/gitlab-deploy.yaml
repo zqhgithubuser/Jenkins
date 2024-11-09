@@ -21,7 +21,7 @@ spec:
             - name: TZ
               value: Asia/Shanghai
             - name: GITLAB_TIMEZONE
-              value: Shanghai
+              value: Beijing
 
             - name: GITLAB_SECRETS_DB_KEY_BASE
               value: rqwNzXsVmxMtwwVj7m43XTPgfbnx7WfxbknhhM7zhNvd3sqbcLWVtXwpW4fRCdJn
@@ -71,6 +71,12 @@ spec:
               value: redis
             - name: REDIS_PORT
               value: "6379"
+
+            - name: SMTP_ENABLED
+              value: "false"
+
+            - name: IMAP_ENABLED
+              value: "false"
           ports:
             - containerPort: 80
               name: http
