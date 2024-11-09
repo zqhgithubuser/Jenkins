@@ -38,7 +38,7 @@ spec:
               value: 15815085647@163.com
 
             - name: GITLAB_HOST 
-              value: gitlab.gitlab.cluster.local
+              value: gitlab.gitlab
             - name: GITLAB_PORT
               value: "80"
             - name: GITLAB_SSH_PORT
